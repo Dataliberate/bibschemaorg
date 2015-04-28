@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bgn="http://bibliograph.net" xmlns:schema="http://schema.org/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en" lang="en">
+
+<!-- NOTE: Terms  as candidates for the bib.schema.org extenstion. -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>bib.schema.org for archives - RDFa Lite Reflection</title>
+<style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+    </style>
+</head>
+<body>
+<h1>Candidates for bib.schema.org</h1>
+<p></p>
+
+<p vocab="http://schema.org" prefix="bib:http://schema.org/">Default vocabulary prefix: 'bib:'</p>
+<p>
+<span property="schema:softwareVersion">bib.schema.org Version 0.1</span>
+</p>
+<hr/>
+<h2>Types</h2>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Container">
+<span class="h" property="rdfs:label">bib:Container</span>
+<span property="rdfs:comment">A basic container type for physically holding, in the looses sense, other things. From boxes and cartons to a fenced area such as a field</span>
+<span> Subclass of:
+		     <a property="rdfs:subClassOf" href="http://schema.org/Product">schema:Product</a>
+</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/BoxContainer">
+<span class="h" property="rdfs:label">bib:BoxContainer</span>
+<span property="rdfs:comment">A container in the form of a box.</span>
+<span> Subclass of:
+		     <a property="rdfs:subClassOf" href="http://schema.org/Container">schema:Container</a>
+</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/FolderContainer">
+<span class="h" property="rdfs:label">bib:FolderContainer</span>
+<span property="rdfs:comment">A container in the form of a folder, such as a manilla folder or a computer file folder.</span>
+<span> Subclass of:
+		     <a property="rdfs:subClassOf" href="http://schema.org/Container">schema:Container</a>
+</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Shelf">
+<span class="h" property="rdfs:label">bib:Shelf</span>
+<span property="rdfs:comment">A shelf containing items or containers.</span>
+<span> Subclass of:
+		     <a property="rdfs:subClassOf" href="http://schema.org/Container">schema:Container</a>
+</span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Collection">
+<span class="h" property="rdfs:label">bib:Collection</span>
+<span property="rdfs:comment">A created collection of Creative Works or other artefacts. </span>
+<span> Subclass of:
+		     <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork">schema:CreativeWork</a>
+</span>
+</div>
+
+<hr/>
+<h2>Properties</h2>
+
+<div typeof="rdf:Property" resource="http://schema.org/contains">
+<span class="h" property="rdfs:label">schema:contains</span>
+<span property="rdfs:comment">A Thing contained in the container.</span>
+<span>Domain:
+            <a property="http://schema.org/domainIncludes" href="http://schema.org/Container">bib:Container</a>
+</span>
+<span>Range:
+            <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">schema:Thing</a>
+</span>
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/containedIn">
+<span class="h" property="rdfs:label">bib:containedIn</span>
+<span>Domain:
+            <a property="http://schema.org/domainIncludes" href="http://schema.org/Container">bib:Container</a>
+</span>
+<span>Range:
+            <a property="http://schema.org/rangeIncludes" href="http://schema.org/Container">bib:Container</a>
+</span>
+</div>
+
+</body>
+</html>
